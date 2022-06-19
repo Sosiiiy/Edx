@@ -1,0 +1,283 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("About")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1 class="who-we-are">
+            <%block name="pageheader">${page_header or _("من نحن")}</%block>
+        </h1>
+
+        <div class="story row">
+            <div class="col-md-6">
+                <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/2-1-2.png" class="img-fluid" alt="learn"/>
+            </div>
+            <div class="col-md-6">
+                <h1 class="our-story my-5">نحكي قصتنا</h1>
+                <h1 class="learn-to-work">من التعلم إلى سوق العمل</h1>
+                <p class="learn">EYouth هي منصة تعليمية الرائدة في مجال التعليم منذ ٢٠١٦، نوفر للشباب البرامج التعليمية العملية والتفاعلية التي تؤهلهم لسوق العمل والتي تواكب التغيرات المهنية في الوقت الحالي. أكثر من ٨٠٠ ألف شاب من محافظات مصر اختار برامجنا وبدأ رحلته لسوق العمل من خلالنا.</p>
+            </div>
+        </div>
+
+
+
+
+        <div class="strong text-center">
+            <h1 class="gools">أنجازاتنا</h1>
+            <h1 class="strong-number">القوة في الأرقام</h1>
+            <div class="counter">
+                <div class="row my-5">
+
+                   <div class="col-md-4 countt countBorderBottom my-3 py-3">
+                    <h1 class="code1">0</h1>
+                    <h6>متدرب</h6>
+                    </div>
+
+                    <div class="col-md-4 countt my-3 countBorderBottom py-3">
+                    <h1 class="code2">0</h1>
+                    <h6>شريك نجاح</h6>
+                    </div>
+
+                    <div class="col-md-4 my-3 countBorderBottom py-3">
+                    <h1 class="code3">0</h1>
+                    <h6>ورشة عمل</h6>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6 countt my-3 countBorderBottom py-3">
+                        <h1 class="code4">0</h1>
+                        <h6>محافظة</h6>
+                        </div>
+    
+                        <div class="col-md-6  my-3 countBorderBottom py-3">
+                        <h1 class="code5">0</h1>
+                        <h6>مليون زائر</h6>
+                        </div>
+                </div>
+           </div>
+        </div>
+
+          
+
+
+        <section class="ourclients">
+            <h6 class="client text-center">شركاء النجاح</h6>
+            <div class="row  text-center">
+            <div class="col-md-4 clients">
+            <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/1-2-150x150.png" style="width: 200px; height: 200px;" class="img-fluid client-img"/>
+            </div>
+            <div class="col-md-4 clients">
+            <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/2-2-150x150.png" style="width: 200px; height: 200px;" class="img-fluid client-img"/>
+            </div>
+            <div class="col-md-4 clients">
+            <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/3-1-150x150.png" style="width: 200px; height: 200px;" class="img-fluid client-img"/>
+            </div>
+            <div class="col-md-4 clients">
+            <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/4-1-150x150.png" style="width: 200px; height: 200px;" class="img-fluid client-img"/>
+            </div>
+            <div class="col-md-4 clients">
+            <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/5-1-150x150.png" style="width: 200px; height: 200px;" class="img-fluid client-img"/>
+            </div>
+            <div class="col-md-4 clients">
+            <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/6-1-150x150.png" style="width: 200px; height: 200px;" class="img-fluid client-img"/>
+            </div>
+            <div class="col-md-4 clients">
+                <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/7-1-150x150.png" style="width: 200px; height: 200px;" class="img-fluid client-img"/>
+                </div>
+                <div class="col-md-4 clients">
+                    <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/8-1-150x150.png" style="width: 200px; height: 200px;" class="img-fluid client-img"/>
+                    </div>
+                    <div class="col-md-4 clients">
+                        <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/9-1-150x150.png" style="width: 200px; height: 200px;" class="img-fluid client-img"/>
+                        </div>
+            </div>
+            </section>
+
+         
+
+
+
+            <section class="ourheross">
+                <h6 class="heros text-center">قم بمقابلة ابطال EYouth</h6>
+                <div class="row  heros-list text-center">
+                <div class="col-md-4 col-lg-3 my-3">
+                <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/Youmna-2.jpg" class="img-fluid" style="width: 300px; height: 300px;"/>
+                <h1 class="hero">Youmna Ali</h1>
+                <h1 class="job">Project Manager</h1>
+                </div>
+                <div class="col-md-4 col-lg-3 my-3">
+                <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/Farah-Kourah-2.jpg" class="img-fluid"  style="width: 300px; height: 300px;"/>
+                <h1 class="hero">Farah Kourah</h1>
+                <h1 class="job">Project Manager</h1>
+                </div>
+                <div class="col-md-4 col-lg-3 my-3">
+                <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/Fathi-2-2.jpg" class="img-fluid" style="width: 300px; height: 300px;"/>
+                <h1 class="hero">Fathi Mohamed</h1>
+                <h1 class="job">Business Development Manager</h1>
+                </div>
+                <div class="col-md-4 col-lg-3 my-3">
+                <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/Mustafa-2.jpg" class="img-fluid" style="width: 300px; height: 300px;"/>
+                <h1 class="hero">Mustafa Abd El Latif</h1>
+                <h1 class="job">CEO and Co-Founder</h1>
+                </div>
+                <div class="col-md-4 col-lg-3 my-3">
+                <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/Shaimaa2-2.jpg" class="img-fluid" style="width: 300px; height: 300px;"/>
+                <h1 class="hero">Shaimaa Abdelmoneim</h1>
+                <h1 class="job">Marketing Communications Manager</h1>
+                </div>
+                <div class="col-md-4 col-lg-3 my-3">
+                <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/Ramadan-2.jpg" class="img-fluid" style="width: 300px; height: 300px;"/>
+                <h1 class="hero">Mohamed Ramadan</h1>
+                <h1 class="job">Growth Marketing Manager</h1>
+                </div>
+                <div class="col-md-4 col-lg-3 my-3">
+                    <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/Farah-Osama-2.jpg" class="img-fluid" style="width: 300px; height: 300px;"/>
+                    <h1 class="hero">Farah Osama</h1>
+                    <h1 class="job">Partnerships Manager</h1>
+                    </div>
+                    <div class="col-md-4 col-lg-3 my-3">
+                        <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/Mohamed-Abd-Elatif-2.jpg" class="img-fluid" style="width: 300px; height: 300px;"/>
+                        <h1 class="hero">Mohamed Abd El Latif</h1>
+                        <h1 class="job">Logistics Manager</h1>
+                        </div>                                                          
+                </div>
+                </section>
+
+
+        
+
+    </section>
+
+    <section>
+        <div class="our-mission row">
+            <div class="mission-left col-md-6 text-center d-flex">
+                <div class="differnce-given">
+                <h1 class="differnce">اختلافنا هو ما نتميز به</h1>
+                <h1 class="given">فنحن نقدم لك</h1>
+            </div>
+            </div>
+            <div class="mission-right col-md-6 d-flex">
+                
+                    <div class="row experience">
+                      <div class="col-md-6 p-3">
+                        <div class="mentor">
+                            <p>تجربة تعليمية فريدة </p>
+                        </div>
+                      </div>
+                      <div class="col-md-6 p-3">
+                        <div class="mentor">
+                      <p>مدربين ذو خبرات </p>
+                        </div>
+                      </div>
+                      <div class="col-md-6 p-3">
+                        <div class="mentor">
+                       <p>محتوى كامل باللغة العربية</p>
+                    </div>
+                       </div>
+                       <div class="col-md-6 p-3">
+                        <div class="mentor">
+                      <p>برامج تفاعلية مع الطلاب</p>
+                      </div>
+                       </div>
+                       <div class="col-md-6 p-3">
+                        <div class="mentor">
+                       <p>دورات بجميع المجالات</p>
+                        </div>
+                       </div>
+                       <div class="col-md-6 p-3">
+                        <div class="mentor">
+                       <p>شهادات معتمدة بنهاية كل برنامج</p>
+                        </div>
+                       </div>
+                        </div>
+                    
+
+                </div>
+               
+            </div>
+            
+        </div>
+    </section>
+    
+      
+    
+</main>
+
+<script>
+    
+
+    let counter=$(".counter").offset().top;
+
+    $(window).scroll(function(){
+
+	let scrollTop=$(window).scrollTop();
+
+    if(scrollTop > counter-100){
+		
+		
+		$({ countNum: $('.code1').html() }).animate({ countNum: 800000 }, {
+		    duration: 2000,
+		    easing: 'linear',
+		    step: function () {
+		    $('.code1').html(Math.floor(this.countNum));
+		},
+		complete: function () {
+		    $('.code1').html(this.countNum);
+		}
+		});
+		
+		
+		$({ countNum: $('.code2').html() }).animate({ countNum: 200 }, {
+		    duration: 2000,
+		    easing: 'linear',
+		    step: function () {
+		    $('.code2').html(Math.floor(this.countNum));
+		},
+		complete: function () {
+		    $('.code2').html(this.countNum);
+		}
+		});
+
+		$({ countNum: $('.code3').html() }).animate({ countNum: 6000 }, {
+		    duration: 2000,
+		    easing: 'linear',
+		    step: function () {
+		    $('.code3').html(Math.floor(this.countNum));
+		},
+		complete: function () {
+		    $('.code3').html(this.countNum);
+		}
+		});
+
+		$({ countNum: $('.code4').html() }).animate({ countNum: 25 }, {
+		    duration: 2000,
+		    easing: 'linear',
+		    step: function () {
+		    $('.code4').html(Math.floor(this.countNum));
+		},
+		complete: function () {
+		    $('.code4').html(this.countNum);
+		}
+		});
+        $({ countNum: $('.code5').html() }).animate({ countNum: 3 }, {
+		    duration: 2000,
+		    easing: 'linear',
+		    step: function () {
+		    $('.code5').html(Math.floor(this.countNum));
+		},
+		complete: function () {
+		    $('.code5').html(this.countNum);
+		}
+		});
+    }
+});
+
+    
+		
+    
+		
+	
+</script>

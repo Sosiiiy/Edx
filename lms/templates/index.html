@@ -11,8 +11,8 @@ from openedx.core.djangolib.markup import HTML, Text
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
       <header>
-        <div class="outer-wrapper">
-          <div class="title">
+        <div class="outer-wrapper px-2 row align-content-center align-items-center">
+          <div class="col-md-6">
             <div class="heading-group">
               % if homepage_overlay_html:
                 ${homepage_overlay_html | n, decode.utf8}
@@ -34,12 +34,149 @@ from openedx.core.djangolib.markup import HTML, Text
             % endif
 
           </div>
-
+          <div class="col-md-6">
+            <img class="w-100" src="https://eyouthlearning.com/wp-content/uploads/2022/03/1st-Section-Photo.png" alt="img">
+          </div>
           <%include file="index_promo_video.html" />
         </div>
 
       </header>
-      <%include file="${courses_list}" />
+      
+        
+
+
+
+      <div class="text-right row align-items-center align-content-center container py-5 my-3">  
+
+        <div class="col-lg-3 col-sm-6">
+            <h2>شركاء النجاح</h2>
+        </div>
+        
+        <div class="col-lg-3 col-sm-6">
+            <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/35-2-150x150.png" alt="">
+            <!-- <h3>image1</h3> -->
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/EBI-1-150x150.png" alt="">
+            <!-- <h3>image2</h3> -->
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <img src="https://eyouthlearning.com/wp-content/uploads/2022/03/UN-1-150x150.png" alt="">
+            <!-- <h3>image3</h3> -->
+        </div>
+        
+    </div>
+    <%include file="${courses_list}" />
+
+
+    <section class="why-learning-section text-right p-5 row">
+   
+      <div class="col-lg-6">
+          <h3 class="position-relative mb-3">Eyouth learning لماذا تتعلم مع</h3>
+          <p>نحن نقدم مجموعة متنوعة من البرامج التفاعلية التي تساعدك على التعلم بشكل أفضل مع وجود محتوى كامل باللغة العربية لتكون قادرا على مواكبة سوق العمل عن طريق مدربين خبراء في المجالات المطلوبة 
+          حاليًا وبأسعار مناسبة،لتحصل على الوظيفة التي تحلم بها بشكل أسرع وفي نهاية كل برنامج تحصل على شهادة معتمدة من 
+          EYouth Learning و المنظمة العالمية للإعتماد IAO.</p>
+          <div class="mt-5">
+              <ul>
+                  <li>
+                      <i class="fas fa-chalkboard-teacher"></i>
+                      برامج تفاعلية وعملية
+                  </li>
+                  <li>
+                      مدربين ذو خبرات
+                  </li>
+                  <li>
+                      سعر مناسب
+                  </li>
+                  <li>
+                      محتوى كامل باللغة العربية
+                  </li>
+                  <li>
+                      شهادات معتمدة بنهاية كل برنامج
+                  </li>
+                  <li>
+                      الحصول على المصادر تعليمية
+                  </li>
+                  <li>
+                      الإنضمام إلى مجتمع تفاعلي من الحاصلين على برامجنا
+                  </li>
+              </ul>
+          </div>
+      </div>
+  
+      <div class="col-lg-6">
+          <img class="w-100" src="https://eyouthlearning.com/wp-content/uploads/2022/03/2-1-2.png" alt="">
+      </div>
+      
+
+
+  </section>
+
+    
+
+
+  <section class="text-center">
+    <div class="our-numbers p-2">
+        <p>إنجازاتنا</p>
+        <h2 class="my-3">أرقامنا منذ 2016</h2>
+        <div class="row align-content-center align-items-center">
+            <div class="col-md">
+                <p>  800 الف </p>
+                <span>متدرب</span>
+            </div>
+            <div class="col-md">
+                <p> 200 </p>
+                <span>شريك نجاح</span>
+            </div>
+            <div class="col-md">
+                <p>  6000 </p>
+                <span>ورشة عمل</span>
+            </div>
+            <div class="col-md">
+                <p> 5 </p>
+                <span>الدول</span>
+            </div>
+            <div class="col-md ">
+                <p>  3 مليون </p>
+                <span>زائر</span>
+            </div>
+        </div>
+    </div>
+    <div class="row p-3 achieve align-content-center align-items-center ">
+        <div class="col-md-6">
+            <img src="static/images/رسالة-تسويقية-1.png" alt="">
+        </div>
+
+        <div class="col-md-6 text-right">
+            <h2 class="text-white"> مؤمنين بما يمكن للفرص التعليمية تغييره </h2>
+            <p>اتعلم مع مدربين خبراء</p>
+            <p>طور مهاراتك</p>
+            <p>غير حياتك المهنية</p>   
+        </div> 
+        
+    </div>
+</section>
+
+<section class="p-5">
+    <div class="row text-right align-content-center align-items-center">
+        <div class="p-5 col-md-6">
+            <div class="trainer-1">
+                <p>انضم إلى مدربين EYouth Learning</p>
+                <div class="text-center">
+                    <button>كن مدربا</button>
+                </div>
+            </div>
+        </div>
+        <div class="p-5 col-md-6">
+            <div class="trainer-2">
+                <p>هل لديك فريق عمل تريد تدريبه؟​</p>
+                <div class="text-center">
+                    <button>طور فريق عملك</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     </section>
 </main>

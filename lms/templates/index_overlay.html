@@ -5,6 +5,11 @@ from django.utils.translation import ugettext as _
 from openedx.core.djangolib.markup import HTML, Text
 %>
 
-<h1>${Text(_(u"Welcome to {platform_name}")).format(platform_name=settings.PLATFORM_NAME)}</h1>
+<!-- <h1>${Text(_(u" Welcome to {platform_name}")).format(platform_name=settings.PLATFORM_NAME)}</h1> -->
+<h1 class="text-right "> اتعلم . اتطور . اشتغل مع <br> EYouth Learning </h1>
+
 ## Translators: 'Open edX' is a registered trademark, please keep this untranslated. See https://open.edx.org for more information.
-<p>${Text(_("It works! Powered by Open edX{registered_trademark}")).format(registered_trademark=HTML("<sup style='font-size: 65%'>&reg;</sup>"))}</p>
+<!-- <p>${Text(_("It works! Powered by Open edX{registered_trademark}")).format(registered_trademark=HTML("<sup style='font-size: 65%'>&reg;</sup>"))}</p> -->
+
+<p class="text-right"> المنصة التعليمية الرائدة في منطقة الشرق الأوسط وشمال إفريقيا منذ 2016 <br>
+    نقدم برامج تعليمية، تفاعلية، باللغة العربية لتأهيل الشباب لسوق العمل </p>

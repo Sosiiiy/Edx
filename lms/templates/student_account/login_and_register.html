@@ -37,7 +37,7 @@
 </%block>
 <div class="section-bkg-wrapper">
     <main id="main" aria-label="Content" tabindex="-1">
-        <div id="content-container" class="login-register-content row" >
+        <div id="content-container" class="login-register-content row h-100" >
             % if enable_enterprise_sidebar:
                 <%include file="enterprise_sidebar.html" />
                 <%
@@ -49,20 +49,18 @@
                 %>
             % endif
             
-                <div class="col-md-6">
-                    <div class="skq">
-                       
+            <div class="login-register-decore col-lg-6">
+                <div class="row h-100 w-100 align-content-center align-items-center">
+                    <div class="mx-auto">
+                        أبدأ التعلم مع <br> <span class="yellow-color">Eyouth</span>
                     </div>
-                    <div class="s">
-                           <h2 class="start-learn">أبدأ التعلم مع </h2>
-                           <h2 style="color: #fdad10 !important;;" class="start-learn"></br>EYouth</h2>
-                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 align-self-center">
+                <div id="login-and-registration-container" class="login-register ${border_class} "></div>
+            </div>
             
         </div>
-        <div class="col-md-6">
-        
-            <div id="login-and-registration-container" class="login-register ${border_class}"></div>
-        </div>
-    </div>
     </main>
 </div>

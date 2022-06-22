@@ -9740,23 +9740,27 @@ h3,
 h4,
 h5,
 h6 {
-    color: #313131;
-    font: normal 1.2em/1.2em 'Tajawal',Georgia, Cambria, "Times New Roman", Times, serif;
-    margin: 0
+    color: #2575FC;
+    font: 'Tajawal',Georgia, Cambria, "Times New Roman", Times, serif;
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700px;
 }
 
 h1 {
-    color: #313131;
-    font: normal 2em/1.4em 'Tajawal',"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #2575fc;
+    font: 'Tajawal',"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-bottom: 30px;
-    text-align: center
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700px;
 }
 
 h2,
 .home>header .title>.heading-group p,
 section.outside-app h1 {
     color: #646464;
-    font: normal 1.2em/1.2em 'Tajawal', Georgia, Cambria, "Times New Roman", Times, serif;
+    font:'Tajawal', Georgia, Cambria, "Times New Roman", Times, serif;
     margin-bottom: 15px;
     -webkit-font-smoothing: antialiased
 }
@@ -13642,7 +13646,7 @@ button.disabled,
     box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.1);
     border-top: 1px solid #c5c6c7;
     padding: 25px 10px 30px 10px;
-    background: #fff;
+    background: #06003A;
     clear: both
 }
 
@@ -13651,7 +13655,11 @@ button.disabled,
     max-width: 1920px;
     margin-left: auto;
     margin-right: auto;
-    margin: 0 auto
+   margin-top: 50px;
+   margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .wrapper-footer footer#footer-openedx:after {
@@ -13722,7 +13730,7 @@ button.disabled,
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon {
-    margin: 5px 0 30px 0
+    margin: auto;
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon:after {
@@ -13732,12 +13740,12 @@ button.disabled,
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li {
-    float: left;
+    /*float: left;*/
     margin-right: 15px
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a {
-    color: #333
+    color: #fff;
 }
 
 .wrapper-footer footer#footer-openedx .colophon .nav-colophon li a:hover,
@@ -13787,7 +13795,7 @@ button.disabled,
 }
 
 .wrapper-footer footer#footer-openedx .wrapper-logo a img {
-    height: 42px
+    height: 42px;
 }
 
 .wrapper-footer footer#footer-openedx .wrapper-logo a:hover {
@@ -13797,8 +13805,8 @@ button.disabled,
 .wrapper-footer footer#footer-openedx .copyright {
     margin: -2px 0 8px 0;
     font-size: 0.6875em;
-    color: #767676;
-    text-align: left
+    color: #FDAD10!important;
+    text-align: center!important;
 }
 
 .wrapper-footer footer#footer-openedx .nav-legal {
@@ -36259,7 +36267,65 @@ button.close-modal:focus,
     .countBorderBottom{
         border-bottom: #fff 1px solid;
     }
+    .slider{
+        width: 250px!important;
+    }
 }
+
+
+/***********************HOME*********************************/
+.partners {
+    align-items: center;
+   
+    display: flex;
+   
+    justify-content: center;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+   }
+    100% {
+        transform: translateX(calc(-250px * 7));
+   }
+}
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+}
+.slider::before, .slider::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+.slider::before {
+    left: 0;
+    top: 0;
+}
+.slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+.slider .slide {
+    height: 100px;
+    width: 250px;
+}
+
+/************************About**********************************/
 .about{
     max-width: 1500px!important;
     margin: auto;
@@ -36330,16 +36396,16 @@ button.close-modal:focus,
 
 .counter{
 	
-	background-color:#2575FC!important;
+	/*background-color:#2575FC!important;*/
     padding: 50px;
 }
 .countt{
-	border-right:2px #fff solid;
+	border-right:2px #000 solid;
 
 }
 
 .count h1 ,h6 {
-    color:#fff!important;
+    color:#2575FC!important;
     font-weight: bold;
     font-size: 30px;
 }
@@ -36612,7 +36678,7 @@ button.close-modal:focus,
     position: relative;
     max-width: 1200px;
     margin: 100px auto;
-    background-color: #2575FC;
+    background-color: #F5F5F5;
     font-family: Helvetica, sans-serif;
     padding:30px;
   }
@@ -36850,6 +36916,8 @@ button.close-modal:focus,
   }
 }*/
 /**********************************sohila css*********************************************/
+
+
 .home>header{
     background-color: white;
 }
@@ -36865,13 +36933,15 @@ h2,
     /* box-shadow: none; */
     border: none;
 }
+/*
 h1 {
    font-size: 54px;
    color: #2575fc;
-}
+}*/
 .home>header p{
     color: #333;
     line-height: 28px;
+    font-size: 24px;
 }
 .courses-container .courses .course {
     border-color: #bfc9ca;
@@ -36887,13 +36957,42 @@ h1 {
         padding: 0px;
     }
 }
+.why-learning-section p{
+    font-size: 24px;
+}
+
+.why-learning-section li{
+    font-size: 18px;
+}
+
+.allCourses button{
+   background-image: none;
+   border:none;
+   border-radius: none;
+   box-shadow: none;
+   background-color: #2575FC;
+   font-size: 24px;
+   padding: 10px;
+}
+
+.allCourses button:hover{
+    background-image: none;
+    border:none;
+    border-radius: none;
+    box-shadow: none;
+    background-color: #2575FC;
+ }
+
+
 .why-learning-section {
     line-height: 28px;
+    background-color: #FAFBFC;
 }
 .why-learning-section h3{
     color: #fdad10;
     font-size: 40px;
     margin-bottom: 20px;
+    font-weight: 1200px!important;
 }
 .why-learning-section h3::after{
     content: "";
@@ -36902,7 +37001,7 @@ h1 {
     height: 2px;
     bottom: -4px;
     background-color: #fdad10;
-    right: 0;
+    left: 0;
 }
 .why-learning-section ul{
     list-style: none;
@@ -36910,12 +37009,17 @@ h1 {
 .our-numbers{
     background-color: #fdad10;
     line-height: 28px;
+    padding: 20px 0px;
 }
 .our-numbers p{
     color: #333;
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 12px;
+}
+
+.our-numbers span{
+    font-size: 24px;
 }
 .our-numbers h2{
     color: #111;
@@ -36925,10 +37029,31 @@ h1 {
     background-color: #2575fc;
     color: white!important;
 }
+
+.achieve p{
+    font-size :24px; ;
+}
 .trainer-1{
     background-color:#2575fc;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(https://eyouthlearning.com/wp-content/uploads/2022/04/TA-Girl.webp);
 }
-.trainer-2,
+
+
+.trainer-2{
+    background-color:#fdad10;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(https://eyouthlearning.com/wp-content/uploads/2022/04/cta_image_2.png);
+}
+
+
+.trainer-2 button{
+    background-color:#2575FC;
+}
 .trainer-1 button{
     background-color:#fdad10;
 }
@@ -36950,7 +37075,27 @@ h1 {
     background-image: none;
     border: none;
     box-shadow: none;
+    text-shadow: none;
 }
+.trainer-1 button:hover{
+    background-color:#fdad10;
+    border-radius: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+.trainer-2 button:hover
+{
+    border-radius: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    background-color: #2575FC;
+}
+
+
 .login-register-decore{
     background-color: #2575fc;
     text-align: center;
@@ -37002,4 +37147,26 @@ h1 {
         top: 0;
         z-index: -999999;
     }
+}
+
+/*******************************Footer**********************************/
+
+.footerTitle{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.footerContent{
+    color: #CECECE!important;
+    font-size: 20px!important;
+    line-height: 1.9px;
+}
+
+.wrapper-logo img{
+    margin-left: 50px!important;
+}
+.copyright{
+    color:#fdad10;
+    text-align: center;
+    margin-top: 20px;
 }

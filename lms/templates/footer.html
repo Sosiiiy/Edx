@@ -69,6 +69,7 @@
           ## through an API to partner sites (such as marketing sites or blogs),
           ## which are not technically powered by Open edX.
           % if not hide_openedx_link:
+          <!--
             <div class="footer-about-openedx">
               <p>
                 <a href="${footer['openedx_link']['url']}">
@@ -76,6 +77,7 @@
                 </a>
               </p>
             </div>
+            -->
           % endif
         </div>
       </div>
@@ -83,7 +85,7 @@
   </div>
 % else:
   <div class="wrapper wrapper-footer">
-    <footer id="footer-openedx" class="grid-container"
+    <footer id="footer-openedx" class="container"
       ## When rendering the footer through the branding API,
       ## the direction may not be set on the parent element,
       ## so we set it here.
@@ -92,16 +94,58 @@
       % endif
     >
       <div class="colophon">
-        <nav class="nav-colophon" aria-label="${_('About')}">
+        <nav class="nav-colophon row" aria-label="${_('About')}">
+          <div class="col-md-2 col-sm-6">
+          <h5 class="footerTitle text-white">Connect</h5>
           <ol>
               % for item_num, link in enumerate(footer['navigation_links'], start=1):
-              <li class="nav-colophon-0${item_num}">
-                <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
+              <li class="nav-colophon-0${item_num} py-2">
+                <a id="${link['name']}" href="${link['url']}" class="footerContent">${link['title']}</a>
               </li>
               % endfor
           </ol>
-        </nav>
+          </div>
 
+
+          <div class="col-md-4 col-sm-6">
+            <div class="contact-footer text-white">
+                <h5 class="footerTitle text-white">Educational Platform</h5>
+                <ul class="list-unstyled">
+                    <li class="py-2">
+                        <a href="#" class="footerContent">Interactive Recording Programs</a>
+                    </li>
+                    <li class="py-2">
+                        <a href="#" class="footerContent">Live Broadcast Programs</a>
+                    </li>
+                    <li class="py-2">
+                        <a href="#" class="footerContent">coaches</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-md-5 col-sm-6 pr-5">
+          <div class="contact-footer text-white">
+              <h5 class="footerTitle text-white">keep in touch</h5>
+              <ul class="list-unstyled">
+                  <li class="py-2">
+                      <a href="#" class="footerContent"><i class="fa-solid fa-location-dot pr-2"></i>20 gool Gamal Street - Mohandessin - Giza</a>
+                  </li>
+                  <li class="py-2">
+                      <a href="#" class="footerContent"><i class="fa-solid fa-phone pr-2"></i>01067959408</a>
+                  </li>
+                  <li class="py-2">
+                      <a href="#" class="footerContent"><i class="fa-solid fa-at pr-2"></i>Support@eyouthlearning.com</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+        </nav>
+      </div>
+    </footer>
         % if context.get('include_language_selector', footer_language_selector_is_enabled()):
             <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
         % endif
@@ -116,7 +160,7 @@
               ## can be included in the footer on other sites
               ## (e.g. a blog or marketing front-end) to provide a consistent
               ## user experience.  See the branding app for details.
-              <img alt="${_('organization logo')}" src="${footer['logo_image']}">
+              <img alt="${_('organization logo')}" src="https://stg.eyouthlearning.com/wp-content/uploads/2022/03/EYouth-Logo-112-2.png">
             </a>
           </p>
         </div>
@@ -132,22 +176,23 @@
           </p>
 
         <nav class="nav-legal" aria-label="${_('Legal')}">
-          <ul>
+          <ul class="d-flex align-items-center justify-content-center">
             % for item_num, link in enumerate(footer['legal_links'], start=1):
-              <li class="nav-legal-0${item_num}">
+              <li class="nav-legal-0${item_num} px-5">
                 <a href="${link['url']}">${link['title']}</a>
               </li>
             % endfor
             <li><a href="${footer['edx_org_link']['url']}">${footer['edx_org_link']['text']}</a></li>
           </ul>
         </nav>
-      </div>
+      
 
       ## Please leave this link and use one of the logos provided
       ## The OpenEdX link may be hidden when this view is served
       ## through an API to partner sites (such as marketing sites or blogs),
       ## which are not technically powered by OpenEdX.
       % if not hide_openedx_link:
+      <!--
       <div class="footer-about-openedx">
         <p>
           <a href="${footer['openedx_link']['url']}">
@@ -155,8 +200,9 @@
           </a>
         </p>
       </div>
+      -->
       % endif
-    </footer>
+   
   </div>
 % endif
 % if include_dependencies:

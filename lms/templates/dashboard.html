@@ -238,7 +238,7 @@ from common.djangoapps.student.models import CourseEnrollment
                   <p class="custom-message">${empty_dashboard_message | n, decode.utf8}</p>
                 %endif
                 % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
-                  <a class="btn btn-primary" href="${marketing_link('COURSES')}">
+                  <a class="btn btn-primary exploreCourses" href="${marketing_link('COURSES')}">
                     ${_("Explore courses")}
                   </a>
                 %endif

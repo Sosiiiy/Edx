@@ -23,7 +23,24 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
   should_redirect_to_authn_mfe = should_redirect_to_authn_microfrontend()
 %>
 <nav class="nav-links" aria-label=${_("Supplemental Links")}>
+  
   <div class="main">
+    
+    <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+      <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link coursesLink" href="${reverse('dashboard')}"
+           aria-current="${'page' if reverse('dashboard') == request.path else 'false'}">
+           ${_("Courses")}
+      </a>
+    </div>
+   
+  
+
+    <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a class="tab-nav-link discover-new-link" href="${marketing_link('COURSES')}"
+           aria-current="${'page' if '/courses' in request.path else 'false'}">
+           ${_('Discover New')}
+        </a>
+    </div>
   % if mktg_site_enabled:
     <div class="mobile-nav-item hidden-mobile nav-item">
       <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
@@ -45,17 +62,75 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
     %endif
   % endif
   </div>
+  
+  <!--
+  <form method="get" action="/courses" class="course-search">
+    <label><span class="sr">${_("Search for a course")}</span>
+      <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+    </label>
+    <button class="search-button search-icon" type="submit">
+      <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+    </button>
+  </form>
+-->
+
+     
+    
   <div class="secondary">
+
+  
+
     <div>
       % if allows_login:
         % if allow_public_account_creation:
           % if should_redirect_to_authn_mfe:
-            <div class="mobile-nav-item hidden-mobile nav-item">
-                <a class="register-btn btn" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Registerrrrrrrrrrrrrrr")}</a>
+
+
+
+          <div class="mobile-nav-item hidden-mobile nav-item" style="background-color: blue;">  
+          <div class="course-search search">
+            <form method="get" action="/courses">
+              <label><span class="sr">${_("Search for a course")}</span>
+                <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+              </label>
+              <button class="search-button search-icon" type="submit">
+                <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+              </button>
+            </form>
+          </div>
+          </div>
+
+            <div class="mobile-nav-item hidden-mobile nav-item">  
+
+           
+
+
+
+                <a class="register-btn btn" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
             </div>
           % else:
+
+         
+
+          <div class="mobile-nav-item hidden-mobile nav-item">  
+       
+            <div class="btn">
+              <form method="get" action="/courses" class="course-search">
+                <label><span class="sr">${_("Search for a course")}</span>
+                  <input class="search-input" name="search_query" type="text" placeholder="${_("Search for a course")}"></input>
+                </label>
+                <button class="search-button search-icon" type="submit">
+                  <span class="icon fa fa-search" aria-hidden="true"></span><span class="sr">${_("Search")}</span>
+                </button>
+              </form>
+            </div>
+
+          </div>
             <div class="mobile-nav-item hidden-mobile nav-item">
-                <a class="register-btn btn" href="/register${login_query()}">${_("Registerbbbbbbbbbbb")}</a>
+
+           
+              
+                <a class="register-btn btn" href="/register${login_query()}">${_("Register")}</a>
             </div>
           % endif
         % endif

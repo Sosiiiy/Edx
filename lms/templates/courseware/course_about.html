@@ -66,11 +66,11 @@ from six import string_types
       <div class="table">
       <section class="intro">
         <div class="heading-group">
-          <h1>
+          <h1 class="headingGroub">
             ${course.display_name_with_default}
           </h1>
           <br />
-          <span>${course.display_org_with_default}</span>
+          <span class="headingGroubOrg">${course.display_org_with_default}</span>
         </div>
 
         <div class="main-cta">
@@ -114,7 +114,7 @@ from six import string_types
             else:
               href_class = "register"
           %>
-          <a href="${reg_href}" class="${href_class}">
+          <a href="${reg_href}" class="${href_class} enrollNow">
             ${_("Enroll Now")}
           </a>
           <div id="register_error"></div>

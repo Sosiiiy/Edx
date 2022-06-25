@@ -1,0 +1,31 @@
+.learn-more{
+    background-color: transparent!important;
+    border-radius: 0!important;
+    background-image: none!important;
+    border: 3px solid white!important;
+    box-shadow: none!important;
+    text-shadow: none!important;
+    font-size: 20px!important;
+    color:#fff!important;
+}
+
+.course-info{
+    border-top: 2px solid #06003A;
+}
+
+.course-organization{
+    text-align: left;
+}
+
+.course-code{
+    text-align: left;
+}
+
+.course-title{
+    text-align: left;
+    color: #2575FC!important;
+    font-weight: bold!important;
+}
+.courses-container .courses .course .course-info .course-date{
+   text-align: center;
+}
